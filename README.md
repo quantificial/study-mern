@@ -1,0 +1,8 @@
+### install package
+
+npm i express express-validator bcryptjs config gravator jsonwebtoken mongoose request
+
+npm i -D nodemon concurrently
+
+
+
