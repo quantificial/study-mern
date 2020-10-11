@@ -62,3 +62,19 @@ use jwt to sign the payload which contains the user id
 
 ### jwt verification
 
+create the middleware auth.js which could be used to verify the JWT and protect the access of the APIs
+
+create an api in the auth api module (routes\api\auth.js) and use middleware to check the token, if the token is valid, return the user object but without the password
+
+### create profile model and api
+
+profile model models\profile.js
+
+profile api at routes\api\profile.js
+
+create api\profile\me api to retrieve the profile information and need to connec to the user object
+
+create profile at POST api\profile
+
+
+
