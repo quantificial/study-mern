@@ -8,10 +8,10 @@ const app = express();
 // init middleware
 app.use(express.json({extended: false}));
 
-
 // connect database
 connectDB();
  
+
 app.get('/', (req, res) => res.send('API Running'));
 
 // define routes
