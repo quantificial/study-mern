@@ -124,6 +124,16 @@ create Navbar and Landing component
 add the Navbar and Landing component to the App component
 
 
+### add react router, route, switch from react-dom 
+
+define the route path in the App.js
+
+create auth\Login and auth\Register components
+
+define switch for the path mapped to Login and Register component
+
+define the Link in the Navbar instead of using the html a
+
 
 
 
