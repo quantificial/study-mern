@@ -134,6 +134,15 @@ define switch for the path mapped to Login and Register component
 
 define the Link in the Navbar instead of using the html a
 
+### start to use react hook
+
+apply useState to create the formData and setFormData and then create onChange method to dynamic update the field to the state
+
+user axios to call the create user api
+
+need to know to supplement the config(headers), body data and the url for the api call
+
+
 
 
 
