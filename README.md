@@ -111,6 +111,19 @@ install dependencies for the react client
 
 npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
 
+add proxy setting in the package.json of client
+
+```
+"proxy": "http://localhost:5000"
+```
+
+### create react components
+
+create Navbar and Landing component
+
+add the Navbar and Landing component to the App component
+
+
 
 
 
