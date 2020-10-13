@@ -125,6 +125,8 @@ router.get(
   '/user/:user_id',
   checkObjectId('user_id'),
   async ({ params: { user_id } }, res) => {
+
+    //if shortcut is not used, could be req.params.user_id
     try {
       const profile = await Profile.findOne({
         user: user_id
@@ -228,6 +230,10 @@ router.delete('/experience/:exp_id', auth, async (req, res) => {
       (exp) => exp._id.toString() !== req.params.exp_id
     );
 
+    // another way to get the removeIndex
+    // const removeIndex = foundProfile.experience.map(i => i.id).indexOf(req.params.exp_id);
+    // foundProfile.experience.splice(removeIndex,1); // use splice to remove the item
+
     await foundProfile.save();
     return res.status(200).json(foundProfile);
   } catch (error) {
@@ -325,6 +331,7 @@ router.get('/github/:username', async (req, res) => {
       Authorization: `token ${config.get('githubToken')}`
     };
 
+    // axios is used to replace request as it is deprecated
     const gitHubResponse = await axios.get(uri, { headers });
     return res.json(gitHubResponse.data);
   } catch (err) {

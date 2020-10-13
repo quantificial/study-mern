@@ -7,7 +7,7 @@ npm i -D nodemon concurrently
 
 ### package.json
 
-add start and server tag and using "nodemon" by 'npm start server'
+add start and server tag and using "nodemon" by 'npm run server'
 
 ```
   "scripts": {
@@ -76,5 +76,9 @@ create api\profile\me api to retrieve the profile information and need to connec
 
 create profile at POST api\profile
 
+get all profiles at GET api\profile
 
+add profile experience API and need to unshift and remove the item from the array
+
+### create post model and api
 
