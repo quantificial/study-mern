@@ -82,3 +82,36 @@ add profile experience API and need to unshift and remove the item from the arra
 
 ### create post model and api
 
+post model at \models\post.js
+
+post api at \routes\api\posts.js
+
+create posts api, create likes api and comment api
+
+### setup ui
+
+define the layout and css
+
+tutorial link
+
+https://www.youtube.com/watch?v=IFM9hbapeA0&list=PLillGF-Rfqba3xeEvDzIcUCxwMlGiewfV
+
+### setup react
+
+npx create-react-app client
+
+add client startup and concurrently run both server and client for the development
+
+```
+"client": "npm start --prefix client",
+"dev": "concurrently \"npm run server\" \"npm run client\""
+```
+
+install dependencies for the react client
+
+npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
+
+
+
+
+
