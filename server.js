@@ -1,7 +1,7 @@
 // main js
 
-const express = require('express');
-const connectDB = require('./config/db')
+const express = require('express'); // use express module
+const connectDB = require('./config/db') // database configuration setup file
 
 const app = express();
 

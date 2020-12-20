@@ -1,7 +1,7 @@
 // mongo database connection by using mongoose
 
-const mongoose = require('mongoose');
-const config = require('config');
+const mongoose = require('mongoose'); // use mongoose 
+const config = require('config'); // use config modules
 const db = config.get('mongoURI'); // use config to get the parameters
 
 // async function to wait the database connection completed

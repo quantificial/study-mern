@@ -1,8 +1,15 @@
+### CommonJS and ES6
+
+backend => CommonJS => const xxx = Require(....) => module.exports = xxxx
+
+frontend browser => ES6 => import xxxx, {yyy, zzz} from cccc => export default zzzz
+
 ### install package and dependencies
 ```
 npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
 
-npm i -D nodemon concurrently
+-- development use
+npm i -D nodemon concurrently 
 ```
 
 ### package.json
@@ -90,9 +97,9 @@ create posts api, create likes api and comment api
 
 ### setup ui
 
-define the layout and css
+define the layout and css, refer to the test\devconnector_html_theme
 
-tutorial link
+another tutorial link to build the html css sass from scratch
 
 https://www.youtube.com/watch?v=IFM9hbapeA0&list=PLillGF-Rfqba3xeEvDzIcUCxwMlGiewfV
 
@@ -101,6 +108,10 @@ https://www.youtube.com/watch?v=IFM9hbapeA0&list=PLillGF-Rfqba3xeEvDzIcUCxwMlGie
 npx create-react-app client
 
 add client startup and concurrently run both server and client for the development
+
+by using "concurrently" module
+
+and then run "npx run dev" to start both client and server
 
 ```
 "client": "npm start --prefix client",
@@ -113,11 +124,17 @@ npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extens
 
 add proxy setting in the package.json of client
 
+so we don't want to call axios.get('https://localhost:5000")
+
+we want to use axios.get('/api/users/....');
+
 ```
 "proxy": "http://localhost:5000"
 ```
 
 ### create react components
+
+App.js => fragment, it's just a ghost element and won't show up in dom
 
 create Navbar and Landing component
 
