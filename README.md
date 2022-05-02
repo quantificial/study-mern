@@ -32,6 +32,12 @@ define db.js for the database connection
 
 create default.json under "config" folder for the connection string
 
+to use different config file, it is required to set NODE_ENV before running the application
+
+in bash, NODE_ENV=prd node server.js
+
+node-config could read the prd.json file for the variables.
+
 ```
 {
     "mongoURI": "mongodb+srv://xxxx:yyyy@xxxx.aaaa.mongodb.net/test?retryWrites=true&w=majority",
