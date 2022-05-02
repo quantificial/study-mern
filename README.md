@@ -165,7 +165,34 @@ user axios to call the create user api
 
 need to know to supplement the config(headers), body data and the url for the api call
 
+### redux thunk
 
+dispatch action in which returning a function is calling async api
+
+normally, the action should return a plain object
+
+dispatch(func()), where func() is dispatch => call async ... xxxxx ... dispatch(obj)
+
+dispatch(obj), where obj is example: {type: REGISTER_SUCCESS,payload: res.data}
+
+```
+export const loadUser = () => async (dispatch) => {
+  try {
+    const res = await api.get('/auth');
+
+    dispatch({
+      type: USER_LOADED,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({
+      type: AUTH_ERROR
+    });
+  }
+};
+
+
+```
 
 
 
